@@ -1,0 +1,19 @@
+/* styles.css */
+
+/* Center the content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2e3136;
+    text-align: center;
+}
+
+/* Style the heading */
+h1 {
+    color: #3e4958;
+    font-size: 3em;
+}
