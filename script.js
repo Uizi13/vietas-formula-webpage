@@ -12,3 +12,5 @@ function onPageLoad() {
     console.log(x);
 }
 
+window.onload = onPageLoad;
+
