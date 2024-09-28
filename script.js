@@ -12,7 +12,7 @@ function combinations(arr, len) {
     while (true) {
         let chosen_i = -1;
         for (let i = len; i >= 0; i--) {
-            if (indices[i] !== i + n - len) {
+            if (indices[i] !== i + arr.length - len) {
                 chosen_i = i;
                 break;
             }
