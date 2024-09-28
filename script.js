@@ -9,6 +9,7 @@ function combinations(arr, len) {
     }
     let indices = Array.from(Array(len).keys());
     let result = [arr.slice(0, len)];
+    console.log(result);
     while (true) {
         let chosen_i = -1;
         for (let i = len - 1; i >= 0; i--) {
@@ -26,7 +27,7 @@ function combinations(arr, len) {
         }
         result.push(indices.map(i => arr[i]));
         console.log(result);
-        return arr;
+        return [arr];
     }
 }
 
