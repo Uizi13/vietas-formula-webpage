@@ -44,6 +44,7 @@ function onPageLoad() {
         const cbn = combinations(x, i);
         let arr = [];
         for (prod in cbn) {
+            console.log(prod);
             arr.push(prod.reduce((a, b) => a * b, 0))
         }
         console.log(-1 * arr.reduce((a, b) => a + b, 0) * ((i % 2) * 2 - 1))
