@@ -2,7 +2,6 @@
 
 /* Center the content */
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -15,5 +14,22 @@ body {
 /* Style the heading */
 h1 {
     color: #787ea0;
-    font-size: 3em;
+    font-size: 4em;
+}
+
+h2 {
+    color: #757fb9;
+    font-size: 2em;
+}
+
+input {
+    color: rgb(112, 123, 218);
+    background-color: rgb(40, 44, 65);
+    border-color: #2e3136;
+    text-align-last: center;
+}
+
+input::placeholder {
+    color: #ffffff; /* Custom gray color */
+    font-style: italic; /* Optional: Italic font */
 }
