@@ -11,7 +11,7 @@ function combinations(arr, len) {
     let result = [arr.slice(0, len)];
     while (true) {
         let chosen_i = -1;
-        for (let i = len; i >= 0; i--) {
+        for (let i = len - 1; i >= 0; i--) {
             if (indices[i] !== i + arr.length - len) {
                 chosen_i = i;
                 break;
@@ -21,10 +21,10 @@ function combinations(arr, len) {
             return result;
         }
         indices[chosen_i] += 1;
-        for (let j = chosen_i + 1; len; j++) {
+        for (let j = chosen_i + 1; j < len; j++) {
             indices[j] = indices[j - 1] + 1;
         }
-        result.push(indices.map(i => arr[i]))
+        result.push(indices.map(i => arr[i]));
     }
 }
 
