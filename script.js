@@ -25,6 +25,8 @@ function combinations(arr, len) {
             indices[j] = indices[j - 1] + 1;
         }
         result.push(indices.map(i => arr[i]));
+        console.log(result);
+        return arr;
     }
 }
 
