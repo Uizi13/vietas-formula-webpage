@@ -15,11 +15,13 @@ body {
 h1 {
     color: #787ea0;
     font-size: 4em;
+    user-select: none;
 }
 
 h2 {
     color: #757fb9;
     font-size: 2em;
+    user-select: none;
 }
 
 input {

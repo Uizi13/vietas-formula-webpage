@@ -23,14 +23,22 @@ const max_root_input_handler = function(e) {
         max_root = n;
         show_polynomial();
         time.innerHTML = "";
-        t1 = Date.now();
+        t1 = Date.now(); 
     }
+}
+
+const click_input_handler = function(e) {
+    e.stopPropagation();
+    e.target.focus();
+    console.log("Input clicked, but event did not propagate.");
 }
   
 degree_field.addEventListener('input', degree_input_handler);
+degree_field.addEventListener('click', click_input_handler);
 degree_field.addEventListener('propertychange', degree_input_handler);
 
 max_root_field.addEventListener('input', max_root_input_handler);
+max_root_field.addEventListener('click', click_input_handler);
 max_root_field.addEventListener('propertychange', max_root_input_handler);
 
 let current_roots = [];
@@ -77,6 +85,9 @@ function create_polynomial(coeffs) {
         if (c !== '0') {
             if (i == coeffs.length - 1) {
                 result += c;
+                if (c == '+' || c == '-') {
+                    result += '1';
+                }
             } else if (i == coeffs.length - 2) {
                 result += c + "x";
             } else {
